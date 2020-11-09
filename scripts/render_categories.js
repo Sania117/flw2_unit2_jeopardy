@@ -40,6 +40,6 @@ function renderCategories() {
       category +
       "</div></div>";
     console.log(my_div_string);
-    $("selector").append($(html));
+    $("#categories").append(my_div_string);
   }
 }
