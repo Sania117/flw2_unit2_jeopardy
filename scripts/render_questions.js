@@ -41,20 +41,35 @@ let questionValues = [100, 200, 300, 400, 500];
 function renderQuestions() {
   // Add code here
   for (let i = 0; i < numCategories; i++) {
-    ("<div class='question-column'></div>");
+    // ("<div class='question-column'></div>");
+    //     <div class='questions-column'>
+    //  *          <div class='question-cell'>VALUE</div>
+    //  *          ...
+    //  *          <div class='question-cell'>VALUE</div>
+    //  *      </div>
+    let questionColumn = "<div class='question-column'>";
     for (let questionValue of questionValues) {
       let questionString =
-        "<div class='question-cell' data-category ='0'>" +
+        questionColumn +
+        "<div class='question-cell' data-category = '" +
+        i +
+        "'> " +
         questionValue +
         "</div>";
 
+      console.log(questionString);
+
+      // "<div class='question-cell' data-category='" + i + "'>"
+      // + questionValue + "</div>"
+
       $("#questions").append(questionString);
     }
+    questionColumn += "</div>";
   }
 }
 
-let my_string = "hi";
-for (let i = 0; i < 100; i++) {
-  my_string = my_string + " mom";
-}
-my_string = my_string + ".";
+//let my_string = "hi";
+//for (let i = 0; i < 100; i++) {
+// my_string = my_string + " mom";
+//}
+//my_string = my_string + ".";
